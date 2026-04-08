@@ -1,86 +1,43 @@
-<h2>
-  <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> 
-  Hello 👋, I'm Mahmoud Osman!
-</h2>
+<h2 align="left">
+ <abc>
+  <br>Hello 👋, I'm Mahmoud Osman!
+  <br><br> Data Analyst 💻
+  <br>
+    <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" alt="Data Analyst GIF" width="500">
+ </abc>
+</h2> 
 
-<img align='right' src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="230">
+<h2 align="left">🛠 Technical Skills:</h2>
+<p align="left">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" height="40"/>
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" width="40" height="40"/>
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg" width="40" height="40"/>
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="40" height="40"/>
+    <img src="https://img.icons8.com/color/48/power-bi.png" width="40" height="40"/>
+    <img src="https://img.icons8.com/color/48/tableau-software.png" width="40" height="40"/>
+    <img src="https://img.icons8.com/color/48/microsoft-excel-2019.png" width="40" height="40"/>
+</p>
 
-<p><em>
-Data Analyst | Student at Faculty of Computers & Artificial Intelligence
-<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
-</em></p>
+<h2 align="left">👨🏻‍💻 About Me:</h2>
 
-[![Linkedin](https://img.shields.io/badge/-Mahmoud%20Osman-blue?style=flat-square&logo=Linkedin&logoColor=white&link=http://www.linkedin.com/in/mahmoud-osman-460b9b388)](http://www.linkedin.com/in/mahmoud-osman-460b9b388)
-![GitHub followers](https://img.shields.io/github/followers/yourusername?label=Follow&style=social)
-![](https://visitor-badge.glitch.me/badge?page_id=yourusername.yourusername)
-
----
-
-### 📊 About Me
-
-I am a passionate **Data Analyst** and a 2nd-year student at the Faculty of Computers and Artificial Intelligence.  
-I have hands-on experience in data analysis through real-world projects and I specialize in turning raw data into meaningful insights.
-
+- 💻 I'm a Data Analyst and a student at the Faculty of Computers & Artificial Intelligence  
+- 📊 Skilled in Python, SQL, Power BI, Tableau, Excel  
 - 📈 Interested in Data Analysis & Business Intelligence  
-- 💻 Skilled in Python, SQL, Power BI, Tableau, Excel  
 - 🎯 Goal: Become a Freelance Data Analyst  
 - 📚 Learning through videos & hands-on practice  
+- 🚀 Built multiple real-world data analysis projects  
 
----
+<h2 align="left">📂 Projects:</h2>
 
-### 🛠 Technical Skills
+- 📊 HR Dashboard → Employee analysis (hiring, attrition, performance)  
+- 🚚 Supply Chain Analysis → تحسين الكفاءة وتقليل التكاليف  
+- 🚗 Cars Store Analysis → استخراج insights من بيانات المبيعات  
 
-- **Programming:** Python (Pandas, NumPy, Matplotlib)  
-- **Data Analysis:** Data Cleaning, Data Wrangling, Data Visualization  
-- **Databases:** SQL (Joins, Aggregations, Queries)  
-- **BI Tools:** Power BI, Tableau  
-- **Excel:** Pivot Tables, VLOOKUP, Data Analysis  
-- **Dashboarding:** Interactive Dashboards & Reports  
-- **Statistics:** Descriptive Statistics  
+<h2 align="left">💙 Let's connect:</h2>
 
----
-
-### 📂 Projects
-
-- 📊 **HR Dashboard**  
-  Built an interactive dashboard analyzing employee data (hiring, attrition, performance).
-
-- 🚚 **Supply Chain Analysis**  
-  Analyzed supply chain data to improve efficiency and reduce costs.
-
-- 🚗 **Cars Store Analysis**  
-  Performed sales data analysis and extracted business insights.
-
----
-
-### 🧠 A little more about me...
-
-```javascript
-const mahmoud = {
-  name: "Mahmoud Osman",
-  role: "Data Analyst",
-  education: "Faculty of Computers and Artificial Intelligence",
-  level: "2nd Year Student",
-  experience: "1 Year",
-
-  skills: {
-    programming: ["Python"],
-    databases: ["SQL"],
-    tools: ["Power BI", "Tableau", "Excel"],
-    analysis: [
-      "Data Cleaning",
-      "Data Visualization",
-      "Data Analysis",
-      "Dashboarding"
-    ]
-  },
-
-  currentFocus: "Building strong projects and working as a freelance data analyst",
-
-  learningStyle: [
-    "Video-based learning",
-    "Hands-on practice"
-  ],
-
-  funFact: "I enjoy turning data into insights that help businesses grow 📊"
-};
+<p>
+  <a href="http://www.linkedin.com/in/mahmoud-osman-460b9b388" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="20"/>
+    Mahmoud Osman
+  </a>
+</p>
