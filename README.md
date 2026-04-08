@@ -1,215 +1,86 @@
-<h2><img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> नमस्ते (Namaste)🙏🏻, I'm Anmol Pratap Singh! <img src="https://media.giphy.com/media/12oufCB0MyZ1Go/giphy.gif" width="50"></h2>
+<h2>
+  <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="30"/> 
+  Hello 👋, I'm Mahmoud Osman!
+</h2>
+
 <img align='right' src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="230">
-<p><em>Technical Lead at <a href="#">######
-</a><img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> 
+
+<p><em>
+Data Analyst | Student at Faculty of Computers & Artificial Intelligence
+<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
 </em></p>
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/misteranmol?label=Follow)](https://twitter.com/intent/follow?screen_name=misteranmol)
-[![Linkedin: anmol](https://img.shields.io/badge/-anmol-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/anmol-p-singh/)](https://www.linkedin.com/in/anmol098/)
-![GitHub followers](https://img.shields.io/github/followers/anmol098?label=Follow&style=social)
-[![website](https://img.shields.io/badge/Website-46a2f1.svg?&style=flat-square&logo=Google-Chrome&logoColor=white&link=https://anmolsingh.me/)](https://anmolsingh.me/)
-![](https://visitor-badge.glitch.me/badge?page_id=anmol098.anmol098)
-![Waka Readme](https://github.com/anmol098/anmol098/workflows/Waka%20Readme/badge.svg)
-<a href="https://trendshift.io/developers/2235" target="_blank"><img src="https://trendshift.io/api/badge/developers/2235" alt="anmol098 | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-
-### 📫 Like to meet me?
-
-Pick a slot if you'd like to meet me and chat about anything you are passionate about - but make sure to describe the agenda
-
-<a href="https://calendly.com/anmol098/30min" target="_blank"><img width="498" alt="meet_link" src="https://user-images.githubusercontent.com/15426564/144297439-f530f383-e73e-41e0-9914-a9b7d3f432e5.png"></a>
-
-👇 Hit in your console or terminal to connect with me.
-
-```bash
-npx anmol
-```
-**👆 This command line tool can be found at [npx anmol](https://github.com/anmol098/npx_card)**
-
-### <img src="https://media.giphy.com/media/VgCDAzcKvsR6OM0uWg/giphy.gif" width="50"> A little more about me...  
-
-```javascript
-const anmol = {
-  name: "Anmol Pratap Singh",
-  pronouns: ["he", "him"],
-  languages: ["TypeScript", "JavaScript", "Python", "Dart"],
-  askMeAbout: [
-    "web development",
-    "mobile app development",
-    "cloud architecture",
-    "generative AI",
-    "agentic systems",
-    "SaaS products",
-    "system design"
-  ],
-
-  technologies: {
-    frontend: {
-      frameworks: ["React", "Next.js"],
-      styling: ["Tailwind CSS", "Sass", "Bootstrap"],
-      uiLibraries: [
-        "Material UI",
-        "Ant Design",
-        "Chakra UI",
-        "shadcn/ui"
-      ]
-    },
-
-    backend: {
-      node: ["Node.js", "Express", "NestJS"],
-      python: ["Flask"]
-    },
-
-    mobile: {
-      crossPlatform: ["Flutter"]
-    },
-
-    devOps: {
-      tools: ["Docker", "GitHub Actions", "Nginx"],
-      practices: ["CI/CD", "Infrastructure as Code"]
-    },
-
-    cloud: {
-      aws: [
-        "EC2",
-        "S3",
-        "RDS",
-        "Lambda",
-        "Fargate",
-        "CloudWatch"
-      ],
-      gcp: [
-        "Compute Engine",
-        "Cloud Run",
-        "Cloud Functions",
-        "Cloud Storage",
-        "Firestore",
-        "BigQuery"
-      ]
-    },
-
-    databases: {
-      relational: ["PostgreSQL"],
-      nosql: ["MongoDB", "Firebase Realtime DB", "Firestore"],
-      inMemory: ["Redis"]
-    },
-
-    realtimeAndAPIs: [
-      "REST APIs",
-      "WebSockets",
-      "Socket.IO"
-    ],
-
-    ai: {
-      generativeAI: [
-        "LLM integration",
-        "Prompt engineering",
-        "Vector databases",
-        "AI agents",
-        "Workflow automation"
-      ],
-      architectures: [
-        "agentic architecture",
-        "tool-augmented agents",
-        "multi-agent systems"
-      ],
-      models: ["OpenAI", "Gemini", "Llama"]
-    }
-  },
-
-  architecture: {
-    frontend: ["SPA", "SSR"],
-    backend: ["monolith", "microservices", "serverless"],
-    cloudPatterns: [
-      "event-driven",
-      "agentic systems",
-      "scalable SaaS"
-    ],
-    data: ["relational", "nosql", "in-memory"]
-  },
-currentFocus:"Building scalable AI-first SaaS products with agentic architectures",
-funFact: "Most bugs disappear after a coffee and a clean commit history"
-};
-```
-
-<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>I love connecting with different people</b> so if you want to say <b>hi, I'll be happy to meet you more!</b> 😊</em>
+[![Linkedin](https://img.shields.io/badge/-Mahmoud%20Osman-blue?style=flat-square&logo=Linkedin&logoColor=white&link=http://www.linkedin.com/in/mahmoud-osman-460b9b388)](http://www.linkedin.com/in/mahmoud-osman-460b9b388)
+![GitHub followers](https://img.shields.io/github/followers/yourusername?label=Follow&style=social)
+![](https://visitor-badge.glitch.me/badge?page_id=yourusername.yourusername)
 
 ---
-<!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-5%2C276%20hrs-blue?style=flat)
 
-![Profile Views](http://img.shields.io/badge/Profile%20Views-617-blue?style=flat)
+### 📊 About Me
 
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-10.49%20million%20lines%20of%20code-blue?style=flat)
+I am a passionate **Data Analyst** and a 2nd-year student at the Faculty of Computers and Artificial Intelligence.  
+I have hands-on experience in data analysis through real-world projects and I specialize in turning raw data into meaningful insights.
 
-**🐱 My GitHub Data** 
+- 📈 Interested in Data Analysis & Business Intelligence  
+- 💻 Skilled in Python, SQL, Power BI, Tableau, Excel  
+- 🎯 Goal: Become a Freelance Data Analyst  
+- 📚 Learning through videos & hands-on practice  
 
-> 📦 390.0 kB Used in GitHub's Storage 
- > 
-> 🏆 369 Contributions in the Year 2026
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 26 Public Repositories 
- > 
-> 🔑 32 Private Repositories 
- > 
-**I'm a Night 🦉** 
+---
 
-```text
-🌞 Morning                1994 commits        ████░░░░░░░░░░░░░░░░░░░░░   15.09 % 
-🌆 Daytime                4446 commits        ████████░░░░░░░░░░░░░░░░░   33.64 % 
-🌃 Evening                4463 commits        ████████░░░░░░░░░░░░░░░░░   33.76 % 
-🌙 Night                  2315 commits        ████░░░░░░░░░░░░░░░░░░░░░   17.51 % 
-```
-📅 **I'm Most Productive on Sunday** 
+### 🛠 Technical Skills
 
-```text
-Monday                   1545 commits        ███░░░░░░░░░░░░░░░░░░░░░░   11.69 % 
-Tuesday                  1867 commits        ████░░░░░░░░░░░░░░░░░░░░░   14.12 % 
-Wednesday                1878 commits        ████░░░░░░░░░░░░░░░░░░░░░   14.21 % 
-Thursday                 1533 commits        ███░░░░░░░░░░░░░░░░░░░░░░   11.60 % 
-Friday                   1405 commits        ███░░░░░░░░░░░░░░░░░░░░░░   10.63 % 
-Saturday                 2130 commits        ████░░░░░░░░░░░░░░░░░░░░░   16.11 % 
-Sunday                   2860 commits        █████░░░░░░░░░░░░░░░░░░░░   21.64 % 
-```
+- **Programming:** Python (Pandas, NumPy, Matplotlib)  
+- **Data Analysis:** Data Cleaning, Data Wrangling, Data Visualization  
+- **Databases:** SQL (Joins, Aggregations, Queries)  
+- **BI Tools:** Power BI, Tableau  
+- **Excel:** Pivot Tables, VLOOKUP, Data Analysis  
+- **Dashboarding:** Interactive Dashboards & Reports  
+- **Statistics:** Descriptive Statistics  
 
+---
 
-📊 **This Week I Spent My Time On** 
+### 📂 Projects
 
-```text
-🕑︎ Time Zone: Asia/Dubai
+- 📊 **HR Dashboard**  
+  Built an interactive dashboard analyzing employee data (hiring, attrition, performance).
 
-💬 Programming Languages: 
-TypeScript               10 hrs 20 mins      ████████████████████░░░░░   79.46 % 
-Other                    1 hr 33 mins        ███░░░░░░░░░░░░░░░░░░░░░░   11.98 % 
-Markdown                 53 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   06.80 % 
-JSON                     4 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.64 % 
-MDX                      4 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.53 % 
+- 🚚 **Supply Chain Analysis**  
+  Analyzed supply chain data to improve efficiency and reduce costs.
 
-🔥 Editors: 
-WebStorm                 12 hrs 44 mins      ████████████████████████░   97.86 % 
-VS Code                  16 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.14 % 
+- 🚗 **Cars Store Analysis**  
+  Performed sales data analysis and extracted business insights.
 
-💻 Operating System: 
-Mac                      13 hrs 1 min        █████████████████████████   100.00 % 
-```
+---
 
-**I Mostly Code in JavaScript** 
+### 🧠 A little more about me...
 
-```text
-JavaScript               33 repos            █████████░░░░░░░░░░░░░░░░   36.67 % 
-TypeScript               19 repos            █████░░░░░░░░░░░░░░░░░░░░   21.11 % 
-Python                   6 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   06.67 % 
-MDX                      1 repo              ░░░░░░░░░░░░░░░░░░░░░░░░░   01.11 % 
-HTML                     1 repo              ░░░░░░░░░░░░░░░░░░░░░░░░░   01.11 % 
-```
+```javascript
+const mahmoud = {
+  name: "Mahmoud Osman",
+  role: "Data Analyst",
+  education: "Faculty of Computers and Artificial Intelligence",
+  level: "2nd Year Student",
+  experience: "1 Year",
 
+  skills: {
+    programming: ["Python"],
+    databases: ["SQL"],
+    tools: ["Power BI", "Tableau", "Excel"],
+    analysis: [
+      "Data Cleaning",
+      "Data Visualization",
+      "Data Analysis",
+      "Dashboarding"
+    ]
+  },
 
+  currentFocus: "Building strong projects and working as a freelance data analyst",
 
+  learningStyle: [
+    "Video-based learning",
+    "Hands-on practice"
+  ],
 
- Last Updated on 08/04/2026 01:03:12 UTC
-<!--END_SECTION:waka-->
-
-**These Readme stats are generated using github action [awesome-readme-stats](https://github.com/anmol098/waka-readme-stats)**
-
-NOTE: Top languages does not indicate my skill level or anything like that. It is just a metric of which languages have been hosted by me on GitHub based on the usage across repositories. There are others which I haven't put up on GitHub.
+  funFact: "I enjoy turning data into insights that help businesses grow 📊"
+};
