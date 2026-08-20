@@ -1,0 +1,280 @@
+import json
+
+notebook = {
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 🧠 Clinical Medical RAG for Epilepsy Research\n",
+    "### High-Performance Evidence-Grounded Retrieval-Augmented Generation System\n",
+    "**Stack:** `LangChain` | `FAISS` | `BAAI/bge-reranker-base` | `all-MiniLM-L6-v2` | `Ollama (Qwen 2.5:7B)` | `PyPDF`\n",
+    "\n",
+    "---\n",
+    "### 📐 Architecture Overview\n",
+    "```\n",
+    "[User Clinical Query]\n",
+    "       │\n",
+    "       ▼\n",
+    "[Multi-Query Reformulation (Qwen 2.5:7B)] ──► 3 Focused Medical Search Variations\n",
+    "       │\n",
+    "       ▼\n",
+    "[FAISS Vector Database (MMR Search)] ──────► Diverse Candidate Chunks across Queries\n",
+    "       │\n",
+    "       ▼\n",
+    "[Global Deduplication] ─────────────────────► Unique Document Passages\n",
+    "       │\n",
+    "       ▼\n",
+    "[Cross-Encoder Deep Reranking (BGE)] ───────► Precision Relevance Scoring\n",
+    "       │\n",
+    "       ▼\n",
+    "[Strict Evidence-Grounded Prompting] ───────► Qwen 2.5:7B Clinical Synthesis with Citations\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 1. Environment Configuration & Cache Paths"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import os\n",
+    "import re\n",
+    "from typing import List, Dict, Any, Tuple\n",
+    "from dotenv import load_dotenv\n",
+    "\n",
+    "# HuggingFace Local Storage Configuration\n",
+    "os.environ[\"HF_HOME\"] = r\"F:\\HuggingFace\"\n",
+    "os.environ[\"HF_HUB_CACHE\"] = r\"F:\\HuggingFace\\hub\"\n",
+    "os.environ[\"TRANSFORMERS_CACHE\"] = r\"F:\\HuggingFace\\transformers\"\n",
+    "\n",
+    "load_dotenv()\n",
+    "\n",
+    "from langchain_community.document_loaders import PyPDFLoader\n",
+    "from langchain_text_splitters import RecursiveCharacterTextSplitter\n",
+    "from langchain_huggingface import HuggingFaceEmbeddings\n",
+    "from langchain_community.vectorstores import FAISS\n",
+    "from sentence_transformers import CrossEncoder\n",
+    "from langchain_ollama import ChatOllama\n",
+    "\n",
+    "print(\"✅ Frameworks and libraries imported successfully!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 2. Load Neural Embedding, Cross-Encoder & LLM Models"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. Dense Embedding Model\n",
+    "embedding_model_name = \"sentence-transformers/all-MiniLM-L6-v2\"\n",
+    "print(f\"Loading Embedding Model: {embedding_model_name}...\")\n",
+    "embeddings = HuggingFaceEmbeddings(model_name=embedding_model_name)\n",
+    "\n",
+    "# 2. BGE Cross-Encoder Reranker\n",
+    "reranker_model_name = \"BAAI/bge-reranker-base\"\n",
+    "print(f\"Loading Cross-Encoder Reranker: {reranker_model_name}...\")\n",
+    "reranker = CrossEncoder(reranker_model_name)\n",
+    "\n",
+    "# 3. Local Ollama LLM (Qwen 2.5:7B)\n",
+    "print(\"Connecting to local Ollama Qwen 2.5:7B...\")\n",
+    "llm = ChatOllama(model=\"qwen2.5:7b\", temperature=0.1)\n",
+    "\n",
+    "print(\"\\n🚀 All neural models loaded successfully!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 3. PDF Ingestion & Structure-Aware Chunking"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pdf_path = r\"F:\\Lectures\\AI Hacathon\\epilepsy.pdf\"\n",
+    "faiss_dir = r\"F:\\Lectures\\AI Hacathon\\FAISS_DB_V2\"\n",
+    "\n",
+    "print(f\"Parsing PDF: {pdf_path}\")\n",
+    "loader = PyPDFLoader(pdf_path)\n",
+    "documents = loader.load()\n",
+    "print(f\"Loaded {len(documents)} pages from PDF.\")\n",
+    "\n",
+    "# Chunking optimized to preserve tables and complete medical associations\n",
+    "splitter = RecursiveCharacterTextSplitter(\n",
+    "    chunk_size=1200,\n",
+    "    chunk_overlap=250,\n",
+    "    separators=[\"\\n\\n\", \"\\n\", \". \", \" \", \"\"]\n",
+    ")\n",
+    "chunks = splitter.split_documents(documents)\n",
+    "print(f\"Created {len(chunks)} text chunks.\")\n",
+    "\n",
+    "# Build and save FAISS Vector Database\n",
+    "vectorstore = FAISS.from_documents(documents=chunks, embedding=embeddings)\n",
+    "vectorstore.save_local(faiss_dir)\n",
+    "print(f\"FAISS Vector Database saved successfully at: {faiss_dir}\")\n",
+    "\n",
+    "retriever = vectorstore.as_retriever(\n",
+    "    search_type=\"mmr\",\n",
+    "    search_kwargs={\"k\": 8, \"fetch_k\": 30, \"lambda_mult\": 0.6}\n",
+    ")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 4. Multi-Query Expansion, Retrieval, Reranking & Grounded Synthesis Pipeline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def ask_clinical_rag(query: str, top_k: int = 8) -> Dict[str, Any]:\n",
+    "    print(\"=\" * 80)\n",
+    "    print(f\"[USER QUESTION]: {query}\")\n",
+    "    print(\"=\" * 80)\n",
+    "\n",
+    "    # Step 1: Multi-Query Expansion\n",
+    "    expansion_prompt = f\"\"\"You are a specialized medical query expansion assistant.\n",
+    "Given the clinical research question below, generate exactly 3 short, specific search queries covering different aspects, clinical terms, synonyms, and specific therapies mentioned.\n",
+    "\n",
+    "Question: {query}\n",
+    "\n",
+    "Rules:\n",
+    "- Return ONLY the 3 queries, one per line.\n",
+    "- Do NOT include numbering, bullet points, or preamble.\n",
+    "\"\"\"\n",
+    "    resp = llm.invoke(expansion_prompt)\n",
+    "    lines = resp.content.strip().split(\"\\n\")\n",
+    "    expanded = []\n",
+    "    for l in lines:\n",
+    "        cleaned = re.sub(r\"^[\\d\\.\\-\\s\\*\\)]+\", \"\", l.strip())\n",
+    "        if cleaned and len(cleaned) > 5 and not cleaned.lower().startswith(\"here are\"):\n",
+    "            expanded.append(cleaned)\n",
+    "    \n",
+    "    retrieval_queries = [query] + expanded[:3]\n",
+    "    print(\"\\n🔍 Generated Retrieval Queries:\")\n",
+    "    for idx, q in enumerate(retrieval_queries, start=1):\n",
+    "        print(f\"  {idx}. {q}\")\n",
+    "\n",
+    "    # Step 2: Diverse MMR Retrieval\n",
+    "    all_candidates = []\n",
+    "    for q in retrieval_queries:\n",
+    "        docs = retriever.invoke(q)\n",
+    "        all_candidates.extend(docs)\n",
+    "\n",
+    "    # Step 3: Global Deduplication\n",
+    "    unique_docs = {}\n",
+    "    for d in all_candidates:\n",
+    "        txt = d.page_content.strip()\n",
+    "        if txt not in unique_docs:\n",
+    "            unique_docs[txt] = d\n",
+    "    unique_candidates = list(unique_docs.values())\n",
+    "    print(f\"\\nRetrieved {len(all_candidates)} candidates across queries -> {len(unique_candidates)} unique chunks.\")\n",
+    "\n",
+    "    # Step 4: Cross-Encoder Reranking\n",
+    "    pairs = [[query, doc.page_content] for doc in unique_candidates]\n",
+    "    scores = reranker.predict(pairs)\n",
+    "    ranked = sorted(zip(unique_candidates, [float(s) for s in scores]), key=lambda x: x[1], reverse=True)\n",
+    "    top_docs = ranked[:top_k]\n",
+    "\n",
+    "    print(\"\\n📊 Top Retrieved Clinical Evidence Chunks:\")\n",
+    "    for i, (doc, score) in enumerate(top_docs[:3], start=1):\n",
+    "        page = doc.metadata.get(\"page\", 0) + 1\n",
+    "        print(f\"  [Source {i} | Page {page} | Score: {score:.4f}] {doc.page_content[:140]}...\")\n",
+    "\n",
+    "    # Step 5: Evidence Context Construction\n",
+    "    context_parts = []\n",
+    "    for i, (doc, score) in enumerate(top_docs, start=1):\n",
+    "        page = doc.metadata.get(\"page\", 0) + 1\n",
+    "        context_parts.append(f\"[Source {i} | Page {page} | Relevance Score: {score:.4f}]\\n{doc.page_content.strip()}\")\n",
+    "    context_text = \"\\n\\n\" + (\"=\" * 50) + \"\\n\\n\".join(context_parts)\n",
+    "\n",
+    "    # Step 6: Grounded Medical Response Generation\n",
+    "    prompt = f\"\"\"You are an expert clinical neurology research assistant specializing in epilepsy and neurotherapeutics.\n",
+    "\n",
+    "Your task is to provide a complete, accurate, and rigorous answer to the user's clinical question based EXCLUSIVELY on the provided document excerpts.\n",
+    "\n",
+    "CRITICAL GUIDELINES:\n",
+    "1. Ground every claim directly in the provided context.\n",
+    "2. If multiple therapies, devices, or percentages are requested, enumerate each one clearly with bullet points.\n",
+    "3. Preserve all numerical percentages, trial names, and responder rates exactly as reported.\n",
+    "4. Attribute each responder rate or outcome specifically to its corresponding device/treatment.\n",
+    "5. Provide a concise synthesis followed by structured details.\n",
+    "\n",
+    "DOCUMENT CONTEXT:\n",
+    "{context_text}\n",
+    "\n",
+    "USER CLINICAL QUESTION:\n",
+    "{query}\n",
+    "\n",
+    "CLINICAL ANSWER:\"\"\"\n",
+    "\n",
+    "    response = llm.invoke(prompt)\n",
+    "    answer = response.content.strip()\n",
+    "\n",
+    "    print(\"\\n\" + \"=\" * 80)\n",
+    "    print(\"FINAL EVIDENCE-GROUNDED ANSWER:\")\n",
+    "    print(\"=\" * 80)\n",
+    "    print(answer)\n",
+    "\n",
+    "    return {\n",
+    "        \"answer\": answer,\n",
+    "        \"sources\": top_docs,\n",
+    "        \"queries\": retrieval_queries\n",
+    "    }"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 5. Benchmark Query Evaluation"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": None,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "query = \"What are the three invasive neuromodulation options approved for adult drug-resistant epilepsy, and what are their typical responder rates?\"\n",
+    "result = ask_clinical_rag(query, top_k=8)"
+   ]
+  }
+ ],
+ "metadata": {
+  "language_info": {
+   "name": "python"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
+
+with open(r"F:\Lectures\AI Hacathon\Hackathon_Final.ipynb", "w", encoding="utf-8") as f:
+    json.dump(notebook, f, indent=1, ensure_ascii=False)
+
+print("Notebook Hackathon_Final.ipynb written successfully!")

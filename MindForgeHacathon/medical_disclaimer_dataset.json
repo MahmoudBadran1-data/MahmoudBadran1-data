@@ -1,0 +1,138 @@
+{
+  "version": "1.0",
+  "description": "Medical Disclaimer Dataset for Epilepsy Clinical RAG System",
+  "categories": {
+    "dosage_questions": {
+      "label": "MEDICAL_CONSULTATION_REQUIRED",
+      "severity": "HIGH",
+      "disclaimer_ar": "⚠️ تحذير طبي: هذه المعلومات للتثقيف الصحي فقط ولا تُغني عن استشارة طبيب متخصص. الجرعات الدوائية تختلف من مريض لآخر بناءً على العمر والوزن والحالة الصحية. يُرجى مراجعة طبيبك أو صيدلانيك قبل تناول أو تعديل أي دواء.",
+      "disclaimer_en": "⚠️ Medical Warning: This information is for educational purposes only and does not replace professional medical advice. Drug dosages vary by patient age, weight, and clinical condition. Always consult your physician or pharmacist before taking or adjusting any medication.",
+      "keywords": [
+        "dose", "dosage", "mg", "milligram", "how much", "how many tablets",
+        "جرعة", "كمية الدواء", "كام حبة", "كم مليجرام", "مقدار الدواء"
+      ],
+      "examples": [
+        "What is the correct dose of Valproate for a child?",
+        "How many mg of Levetiracetam should I take?",
+        "ما الجرعة المناسبة من فالبروات للأطفال؟",
+        "كام ملليجرام من ليفيتيراسيتام آخذ يومياً؟"
+      ]
+    },
+    "sudden_death_sudep": {
+      "label": "MEDICAL_CONSULTATION_REQUIRED",
+      "severity": "HIGH",
+      "disclaimer_ar": "⚠️ تحذير طبي مهم: الموت المفاجئ في الصرع (SUDEP) هو مخاطرة حقيقية تستوجب نقاشاً مفتوحاً مع طبيبك المتخصص. لا تتوقف عن أدويتك أو تغير نمط حياتك دون استشارة طبيب.",
+      "disclaimer_en": "⚠️ Important Medical Warning: Sudden Unexpected Death in Epilepsy (SUDEP) is a real risk requiring open discussion with your specialist. Never stop medications or change your lifestyle without medical consultation.",
+      "keywords": [
+        "sudden death", "SUDEP", "die", "death", "fatal", "dangerous",
+        "وفاة مفاجئة", "سودب", "موت", "خطر على الحياة", "خطير", "وفاة"
+      ],
+      "examples": [
+        "Can epilepsy cause sudden death?",
+        "What is SUDEP and how dangerous is it?",
+        "هل الصرع ممكن يسبب الوفاة المفاجئة؟",
+        "ما هو SUDEP وهل هو خطير؟"
+      ]
+    },
+    "medication_stopping": {
+      "label": "MEDICAL_CONSULTATION_REQUIRED",
+      "severity": "CRITICAL",
+      "disclaimer_ar": "🚨 تحذير عاجل: إيقاف أدوية الصرع بدون إشراف طبي يمكن أن يُسبب نوبات شديدة أو حالة الصرع المتواصلة (Status Epilepticus) المهددة للحياة. لا تُوقف دوائك أبداً دون مراجعة طبيبك المتخصص أولاً.",
+      "disclaimer_en": "🚨 CRITICAL Warning: Stopping epilepsy medications without medical supervision can cause severe seizures or life-threatening Status Epilepticus. NEVER stop your medication without consulting your specialist first.",
+      "keywords": [
+        "stop medication", "stop drug", "discontinue", "quit", "no more pills",
+        "وقف الدواء", "اوقف الدواء", "هوقف", "اقطع الدواء", "مش هاخد دواء", "كفاية أدوية"
+      ],
+      "examples": [
+        "Can I stop taking my epilepsy medication?",
+        "I haven't had seizures in a year, should I stop medication?",
+        "هل أوقف الدواء لو ما عنديش نوبات من سنة؟",
+        "ممكن أوقف دواء الصرع وحدي؟"
+      ]
+    },
+    "pregnancy_epilepsy": {
+      "label": "MEDICAL_CONSULTATION_REQUIRED",
+      "severity": "HIGH",
+      "disclaimer_ar": "⚠️ تحذير طبي: الحمل مع الصرع يتطلب متابعة طبية دقيقة ومتخصصة. بعض أدوية الصرع لها تأثيرات على الجنين وتحتاج تعديلاً تحت إشراف طبيب متخصص في أمراض الأعصاب والتوليد.",
+      "disclaimer_en": "⚠️ Medical Warning: Pregnancy with epilepsy requires close specialized medical follow-up. Some antiseizure medications affect fetal development and must be adjusted under the supervision of a specialist neurologist and obstetrician.",
+      "keywords": [
+        "pregnant", "pregnancy", "baby", "fetus", "teratogenic", "birth defects",
+        "حمل", "حامل", "جنين", "أثناء الحمل", "ولادة", "طفل"
+      ],
+      "examples": [
+        "Is it safe to take Valproate during pregnancy?",
+        "What epilepsy medications are safe during pregnancy?",
+        "هل يمكنني الحمل وأنا على أدوية الصرع؟",
+        "ما أدوية الصرع الآمنة أثناء الحمل؟"
+      ]
+    },
+    "driving_restrictions": {
+      "label": "MEDICAL_CONSULTATION_REQUIRED",
+      "severity": "MEDIUM",
+      "disclaimer_ar": "⚠️ تنبيه قانوني وطبي: قيادة السيارة مع الصرع تخضع لقوانين وأنظمة طبية وقانونية تختلف من بلد لآخر. يجب استشارة طبيبك للحصول على تقييم رسمي لقدرتك على القيادة.",
+      "disclaimer_en": "⚠️ Legal & Medical Notice: Driving with epilepsy is subject to medical and legal regulations that vary by country. You must consult your physician for an official assessment of your fitness to drive.",
+      "keywords": [
+        "drive", "driving", "car", "license", "vehicle",
+        "قيادة", "قيادة سيارة", "رخصة قيادة", "ممكن أقود"
+      ],
+      "examples": [
+        "Can I drive a car if I have epilepsy?",
+        "When can I start driving again after a seizure?",
+        "هل يمكنني قيادة السيارة وعندي صرع؟",
+        "متى أقدر أرجع أقود السيارة بعد النوبة؟"
+      ]
+    },
+    "emergency_seizure": {
+      "label": "MEDICAL_CONSULTATION_REQUIRED",
+      "severity": "CRITICAL",
+      "disclaimer_ar": "🚨 حالة طوارئ: إذا كانت النوبة مستمرة لأكثر من 5 دقائق أو تتكرر دون استعادة الوعي، فهذه حالة طوارئ طبية. اتصل بالإسعاف فوراً (الرقم 123 في مصر / 911 / 999 حسب بلدك).",
+      "disclaimer_en": "🚨 EMERGENCY: If a seizure lasts more than 5 minutes or seizures occur repeatedly without regaining consciousness, this is a medical emergency. Call emergency services IMMEDIATELY.",
+      "keywords": [
+        "emergency", "status epilepticus", "seizure not stopping", "5 minutes",
+        "طوارئ", "نوبة مستمرة", "النوبة ما وقفتش", "خمس دقايق", "استدعاء اسعاف"
+      ],
+      "examples": [
+        "What do I do if a seizure doesn't stop?",
+        "Is Status Epilepticus an emergency?",
+        "ماذا أفعل لو النوبة ما وقفتش؟",
+        "هل الصرع المتواصل خطير؟"
+      ]
+    },
+    "children_epilepsy": {
+      "label": "MEDICAL_CONSULTATION_REQUIRED",
+      "severity": "HIGH",
+      "disclaimer_ar": "⚠️ تحذير طبي: الصرع عند الأطفال يختلف كلياً عن البالغين ويحتاج تقييماً متخصصاً من طبيب أعصاب أطفال. لا تُعطِ أي دواء لطفلك دون وصفة طبية متخصصة.",
+      "disclaimer_en": "⚠️ Medical Warning: Epilepsy in children is fundamentally different from adults and requires specialized evaluation by a pediatric neurologist. Never give any medication to your child without a specialist prescription.",
+      "keywords": [
+        "child", "children", "kid", "pediatric", "infant", "baby", "toddler",
+        "طفل", "أطفال", "رضيع", "صغير", "ابني", "بنتي"
+      ],
+      "examples": [
+        "My child had a febrile seizure, what should I do?",
+        "What epilepsy medications are safe for children?",
+        "طفلي عنده نوبة حرارية ماذا أفعل؟",
+        "ما أدوية الصرع المناسبة للأطفال؟"
+      ]
+    },
+    "lifestyle_triggers": {
+      "label": "INFORMATIONAL_WITH_ADVICE",
+      "severity": "LOW",
+      "disclaimer_ar": "💡 نصيحة طبية: رغم أن المعلومات التالية مستندة لأبحاث علمية، إلا أن محفزات النوبات تختلف من شخص لآخر. تحدث مع طبيبك لتحديد محفزاتك الشخصية.",
+      "disclaimer_en": "💡 Medical Advice: Although the following information is evidence-based, seizure triggers vary individually. Discuss your personal triggers with your physician.",
+      "keywords": [
+        "trigger", "alcohol", "sleep deprivation", "stress", "light",
+        "محفزات", "كحول", "الحرمان من النوم", "ضغط نفسي", "ضوء وامض"
+      ],
+      "examples": [
+        "What triggers epileptic seizures?",
+        "Does lack of sleep cause seizures?",
+        "ما محفزات نوبات الصرع؟",
+        "هل قلة النوم تسبب نوبات صرع؟"
+      ]
+    }
+  },
+  "general_disclaimer": {
+    "ar": "📋 تنبيه عام: جميع المعلومات المقدمة من هذا النظام مستخرجة من الأدبيات الطبية المتخصصة وهي للأغراض التثقيفية والبحثية فقط. لا تُعدّ هذه المعلومات بديلاً عن الاستشارة الطبية المتخصصة أو التشخيص أو العلاج. يُرجى دائماً مراجعة الطبيب المتخصص.",
+    "en": "📋 General Notice: All information provided by this system is extracted from specialized medical literature and is intended for educational and research purposes only. This information does not constitute a substitute for specialized medical consultation, diagnosis, or treatment. Always consult a qualified medical specialist."
+  }
+}

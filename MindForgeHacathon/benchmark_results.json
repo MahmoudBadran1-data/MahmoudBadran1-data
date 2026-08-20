@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "total_queries": 5,
+    "avg_latency_seconds": 28.69,
+    "avg_entity_coverage_pct": 64.0
+  },
+  "detailed_results": [
+    {
+      "id": "Q1_NEUROMODULATION",
+      "category": "Therapeutics / Devices",
+      "question": "What are the three invasive neuromodulation options approved for adult drug-resistant epilepsy, and what are their typical responder rates?",
+      "latency_seconds": 22.75,
+      "top_reranker_score": 0.9988,
+      "top_source_page": 23,
+      "entity_coverage_pct": 80.0,
+      "matched_entities": [
+        "VNS",
+        "ANT-DBS",
+        "RNS",
+        "75%"
+      ],
+      "answer": "Based on the provided document excerpts, the three invasive neuromodulation options approved for adult drug-resistant epilepsy (DRE) are:\n\n1. **Vagus Nerve Stimulation (VNS)**\n   - **Typical Responder Rate:** Approximately 40%–60% of patients show sustained improvements in mood, alertness, and overall quality of life. This responder rate is derived from long-term meta-analyses including more than 3000 patients.\n\n2. **Deep Brain Stimulation of the Anterior Nucleus of the Thalamus (ANT-DBS)**\n   - **Typical Responder Rate:** In the SANTÉ trial, long-term follow-up showed a median seizure reduction of about 75% at 10 years, with acceptable safety and possible reduction in SUDEP risk.\n\n3. **Responsive Neurostimulation (RNS)**\n   - **Typical Responder Rate:** Nine-year prospective data reveal a median reduction of approximately 75% in seizures, with stable or improved cognitive outcomes. This therapy is particularly useful for bilateral mesial temporal lobe epilepsy (TLE) or seizure foci located in eloquent cortex, where resection carries unacceptable risk.\n\nThese neuromodulation therapies are approved for patients with DRE who are not suitable candidates for curative resection or ablation, including those with nonlocalizable seizures, multifocal epilepsy, bilateral epileptogenic networks, or seizure onset within eloquent cortex.",
+      "retrieval_queries": [
+        "What are the three invasive neuromodulation options approved for adult drug-resistant epilepsy, and what are their typical responder rates?",
+        "Invasive neuromodulation epilepsy treatments",
+        "Thalamic stimulation for epilepsy responder rate",
+        "Staged multiple subpial transection epilepsy outcomes"
+      ]
+    },
+    {
+      "id": "Q2_DRE_DEFINITION",
+      "category": "Clinical Diagnostics",
+      "question": "How is Drug-Resistant Epilepsy (DRE) clinically defined by the ILAE consensus?",
+      "latency_seconds": 20.71,
+      "top_reranker_score": 0.9158,
+      "top_source_page": 34,
+      "entity_coverage_pct": 40.0,
+      "matched_entities": [
+        "appropriately chosen",
+        "seizure freedom"
+      ],
+      "answer": "Drug-Resistant Epilepsy (DRE) is clinically defined by the ILAE consensus as follows:\n\n- **Definition**: DRE is conventionally defined as the failure of two appropriately chosen, adequately dosed, and well-tolerated Antiseizure Medications (ASMs) regimens, whether used as monotherapy or in combination, to achieve sustained seizure freedom. This definition is based on the consensus proposal by the Ad Hoc Task Force of the ILAE Commission on Therapeutic Strategies, as reported in the reference [246].\n\n- **Prevalence**: Approximately one-third of people with epilepsy meet criteria for DRE, although estimates can vary by population, healthcare setting, and epilepsy syndrome. A 2021 meta-analysis reported a pooled prevalence of 13.7% in community-based cohorts and approximately 36% in clinic-based samples. Cumulative incidence estimates are around 25% in children and 15% in adults, as detailed in the reference [248].\n\nThese definitions and statistics highlight the complexity and variability in the clinical management and prevalence of DRE.",
+      "retrieval_queries": [
+        "How is Drug-Resistant Epilepsy (DRE) clinically defined by the ILAE consensus?",
+        "ILAE consensus on DRE definition",
+        "clinical criteria for drug-resistant epilepsy",
+        "therapies recommended by ILAE for DRE"
+      ]
+    },
+    {
+      "id": "Q3_KETOGENIC_DIET",
+      "category": "Dietary Interventions",
+      "question": "What is the clinical efficacy and responder rate of Ketogenic and Modified Atkins Diet (MAD) in drug-resistant epilepsy?",
+      "latency_seconds": 26.34,
+      "top_reranker_score": 0.7294,
+      "top_source_page": 34,
+      "entity_coverage_pct": 80.0,
+      "matched_entities": [
+        "50%",
+        "seizure reduction",
+        "three times",
+        "sixfold"
+      ],
+      "answer": "### Clinical Efficacy and Responder Rates of Ketogenic and Modified Atkins Diet (MAD) in Drug-Resistant Epilepsy\n\n#### Ketogenic Diet (KD)\n- **Efficacy and Responder Rate**: According to multiple studies, children with drug-resistant epilepsy treated with KDs are approximately three times more likely to achieve seizure freedom and up to six times more likely to achieve at least a 50% reduction in seizure frequency compared with usual care [277, 278, 279].\n- **Specific Responder Rate**: A recent meta-analysis indicates that KDs combined with antiseizure medications (ASM) increase the likelihood of achieving at least a 50% seizure reduction by more than sixfold [279].\n\n#### Modified Atkins Diet (MAD)\n- **Efficacy and Responder Rate**: The MAD appears to have comparable efficacy with better tolerability than the classical KD in some patients, making it a practical dietary option for many clinical settings [278, 279].\n- **Specific Responder Rate**: A recent pooled analysis confirms that MAD combined with ASM increases the likelihood of achieving at least a 50% seizure reduction by more than sixfold [279].\n\n### Summary\n- **Ketogenic Diet (KD)**: Children with drug-resistant epilepsy treated with KDs are approximately three times more likely to achieve seizure freedom and up to six times more likely to achieve at least a 50% reduction in seizure frequency compared with usual care. Combining KD with ASM further increases the likelihood of achieving at least a 50% seizure reduction by more than sixfold.\n- **Modified Atkins Diet (MAD)**: MAD has comparable efficacy to KD with better tolerability, and combining MAD with ASM also increases the likelihood of achieving at least a 50% seizure reduction by more than sixfold.",
+      "retrieval_queries": [
+        "What is the clinical efficacy and responder rate of Ketogenic and Modified Atkins Diet (MAD) in drug-resistant epilepsy?",
+        "Ketogenic Diet clinical efficacy drug-resistant epilepsy",
+        "Modified Atkins Diet responder rate epilepsy",
+        "Ketogenic Diet vs Modified Atkins Diet epilepsy treatment outcomes"
+      ]
+    },
+    {
+      "id": "Q4_CIRCADIAN_PATTERNS",
+      "category": "Pathophysiology",
+      "question": "What cyclic and circadian patterns govern epileptic seizures, and why is chronotherapy relevant?",
+      "latency_seconds": 37.6,
+      "top_reranker_score": 0.9581,
+      "top_source_page": 4,
+      "entity_coverage_pct": 40.0,
+      "matched_entities": [
+        "circadian",
+        "chronotherapy"
+      ],
+      "answer": "### Cyclic and Circadian Patterns Governing Epileptic Seizures\n\nEpileptic seizures do not occur randomly but follow specific cyclic and circadian patterns, which vary by seizure type and epilepsy syndrome. Key findings from the provided document excerpts include:\n\n- **Seizure Timing by Seizure Type and Syndrome:**\n  - **Hypermotor and automotor seizures** tend to cluster during the night.\n  - **Atonic seizures** occur more often in the afternoon.\n  - **Myoclonic, clonic, and tonic seizures** occur more often in the morning.\n  - **Frontal lobe epilepsy** often shows an early morning predominance.\n  - **Occipital lobe epilepsy** tends to peak in the late afternoon.\n  - **Juvenile myoclonic epilepsy (JME)** is characterized by seizures shortly after awakening.\n  - **Temporal lobe epilepsy (TLE)** and **absence epilepsy (AE)** may show bimodal circadian distributions.\n\n- **Syndrome-Specific Patterns:**\n  - The preferred phase of seizure occurrence differs by seizure type and syndrome, indicating that these patterns are not uniform across all epilepsy types.\n\n### Relevance of Chronotherapy\n\nChronotherapy, which involves adjusting the timing of treatments to align with the patient's circadian rhythms, is relevant for several reasons:\n\n- **Clinical Relevance:**\n  - These temporal patterns can inform **seizure monitoring, risk prediction, and time-of-day-adapted treatment**. Understanding the circadian patterns of seizures can help in predicting seizure occurrence and adjusting treatment accordingly.\n\n- **Potential Benefits:**\n  - **Time-adjusted dosing** has shown modest or inconsistent benefits in some studies, suggesting that chronotherapy may be most useful in patients with clear circadian seizure clustering, sleep-sensitive epilepsies, or predictable nocturnal seizures.\n\n- **Challenges and Limitations:**\n  - **Direct extrapolation** from animal models to humans is difficult due to differences in circadian rhythms, sleep architecture, and drug metabolism.\n  - **Lack of Robust Randomized Trials:** The implementation of chronotherapy is limited by the absence of robust randomized trials stratified by epilepsy type, seizure timing, sleep phenotype, and circadian phase.\n  - **Individual Differences:** Variability in circadian timing, age, lifestyle, comorbid sleep disorders, polypharmacy, and adherence further complicate standardized dosing schedules.\n\n- **Future Directions:**\n  - Future studies should combine long-term seizure diaries, wearable or intracranial recordings, and pharmacokinetic-pharmacodynamic modeling to personalize dosing schedules. This approach could support a shift from reactive seizure treatment toward anticipatory management.\n\n### Synthesis\n\nChronotherapy is a promising strategy for optimizing epilepsy treatment by aligning therapy with periods of increased seizure vulnerability. While the clinical value of chronotherapy is promising, it remains limited by the lack of robust randomized trials and individual variability. Future research should focus on integrating advanced monitoring and modeling techniques to better personalize treatment schedules.",
+      "retrieval_queries": [
+        "What cyclic and circadian patterns govern epileptic seizures, and why is chronotherapy relevant?",
+        "cyclic patterns epileptic seizures",
+        "circadian rhythms and seizure frequency",
+        "chronotherapy epilepsy treatment effectiveness"
+      ]
+    },
+    {
+      "id": "Q5_SURGERY_RESECTION",
+      "category": "Surgical Interventions",
+      "question": "When is resective surgery or ablation indicated for epilepsy, and what are the main clinical considerations?",
+      "latency_seconds": 36.05,
+      "top_reranker_score": 0.3531,
+      "top_source_page": 23,
+      "entity_coverage_pct": 80.0,
+      "matched_entities": [
+        "epileptogenic zone",
+        "eloquent cortex",
+        "resection",
+        "ablation"
+      ],
+      "answer": "Resective surgery or ablation is indicated for epilepsy when a well-defined epileptogenic zone can be safely removed, particularly in cases of drug-resistant focal epilepsy. The main clinical considerations and outcomes associated with resective surgery or ablation are as follows:\n\n- **Resective Surgery Indications and Outcomes:**\n  - **Anterior Temporal Lobectomy, Selective Lesionectomy, and Tailored Extratemporal Resections:** These procedures are effective for focal drug-resistant epilepsy, such as mesial temporal lobe epilepsy (MTLE) with hippocampal sclerosis, focal cortical dysplasia (FCD) type II, cavernous malformations, and low-grade tumors. Successful resection can achieve long-term seizure freedom in approximately 60% to 80% of patients [256].\n  - **Improved Quality of Life and Functional Independence:** Successful surgery is often associated with improved quality of life, greater functional independence, reduced medication burden, and better long-term survival [256, 261].\n\n- **Ablative Procedures:**\n  - **Laser Interstitial Thermal Therapy (LITT):** This minimally invasive technique is increasingly used for mesial temporal lobe epilepsy, hypothalamic hamartoma, periventricular nodular heterotopia, and cavernous malformations. Prospective and multicenter studies report Engel Class I or II outcomes in a significant proportion of patients [260].\n\n- **Disconnective Procedures:**\n  - **Corpus Callosotomy and Hemispherotomy:** These procedures are used when seizure networks cannot be treated by focal resection alone. Corpus callosotomy is primarily considered for patients with disabling drop attacks, achieving seizure freedom in about 50% to 55% of patients [258, 259]. Hemispherotomy can achieve seizure freedom or near-freedom in more than 60% to 70% of appropriately selected children, potentially stabilizing or improving developmental outcomes [258, 259].\n\n- **Clinical Considerations:**\n  - **Noninvasive Findings:** When noninvasive findings are discordant or the suspected epileptogenic focus lies near eloquent cortex, stereotactic electroencephalography (SEEG) provides millimeter-scale mapping of seizure onset and propagation to guide resective, disconnective, or ablative treatment [255].\n  - **Surgical Evaluation:** For appropriately selected patients with drug-resistant focal epilepsy, surgical evaluation should be considered early as part of mechanism-guided and network-informed care [261].\n\nIn summary, resective surgery or ablation is indicated for patients with drug-resistant focal epilepsy where a well-defined epileptogenic zone can be safely removed. The success rates vary depending on the specific condition and the feasibility of complete resection, with outcomes often leading to improved quality of life, reduced medication burden, and better long-term survival.",
+      "retrieval_queries": [
+        "When is resective surgery or ablation indicated for epilepsy, and what are the main clinical considerations?",
+        "resective surgery indications epilepsy",
+        "ablation therapy epilepsy clinical considerations",
+        "seizure control surgical options epilepsy"
+      ]
+    }
+  ]
+}
